@@ -1,0 +1,15 @@
+version: "3"
+services:
+  apache:
+    build: ./apache
+    ports:
+      - "8080:80"
+    volumes:
+      - ./www:/var/www.local
+    depends_on:
+      - php
+
+  php:
+    image: php:8.2-fpm
+    volumes:
+      - ./www:/var/www.local
