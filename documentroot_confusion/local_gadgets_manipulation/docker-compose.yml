@@ -1,0 +1,9 @@
+services:
+  apache:
+    build: ./apache
+    ports:
+      - "8080:80"
+
+  php:
+    image: php:8.2-fpm
+

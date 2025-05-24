@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>XSS Test</title>
+  </head>
+  <body>
+    <h1>This is xss/index.html</h1>
+    <script>
+      document.write("Query: " + decodeURIComponent(location.search));
+    </script>
+  </body>
+</html>

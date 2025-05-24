@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>LibreOffice Help</title></head>
+<body>
+<script>
+var url = window.location.href;
+var n = url.indexOf('?');
+if (n != -1) {
+    var version = "xss";
+    var query = url.substr(n + 1, url.length);
+    var newURL = version + '/index.html?' + query;
+    window.location.replace(newURL);
+} else {
+    window.location.replace('latest/index.html');
+}
+</script>
+</body>
+</html>
